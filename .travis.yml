@@ -13,6 +13,8 @@ script:
   - wget -c -nv https://github.com/$(wget -q https://github.com/probonopd/go-appimage/releases -O - | grep "appimagetool-.*-x86_64.AppImage" | head -n 1 | cut -d '"' -f 2)
   - chmod +x ./appimagetool-*.AppImage
   - ./appimagetool-*.AppImage deploy appdir/usr/share/applications/*.desktop
+  - find appdir/ -name '*nss*' -delete || true # https://github.com/probonopd/nativefier-appimage/issues/1#issuecomment-451652895
+  - find appdir/ -name '*softokn*' -delete || true # https://github.com/probonopd/nativefier-appimage/issues/1#issuecomment-451652895
   - ./appimagetool-*.AppImage appdir/
 
 branches:
