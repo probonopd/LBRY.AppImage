@@ -6,6 +6,7 @@ script:
   - mkdir appdir
   - wget $(wget -q "https://lbry.com/linux" -O - | grep deb | cut -d '"' -f 4 | head -n 1)
   - dpkg -x *.deb appdir/
+  - mkdir -p appdir/usr/bin ; mv appdir/opt/LBRY/* appdir/usr/bin/ ; rm -rf appdir/opt
   - wget -c -nv https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage
   - wget -c -nv https://github.com/$(wget -q https://github.com/probonopd/go-appimage/releases -O - | grep "appimagetool-.*-x86_64.AppImage" | head -n 1 | cut -d '"' -f 2)
   - chmod +x ./appimagetool-*.AppImage
