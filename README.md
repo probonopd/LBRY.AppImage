@@ -9,4 +9,4 @@ Inofficial https://LBRY.tv/ AppImage until there is an official one.
 * https://github.com/lbryio/lbry-desktop/issues/1960
 * https://github.com/lbryio/lbry-desktop/issues/2522
 
-Download it from https://github.com/probonopd/LBRY.AppImage/releases/download/continuous/
+Download it from https://github.com/probonopd/LBRY.AppImage/releases/continuous/
